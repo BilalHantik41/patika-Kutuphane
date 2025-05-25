@@ -2,17 +2,17 @@ Patika Kütüphane
 
 Açıklama
 
-Patika.dev C# Eğitimi kapsamında geliştirilen basit bir konsol tabanlı Kütüphane Yönetim Sistemi.
+Patika.dev C# Eğitimi kapsamında geliştirilen basit bir konsol tabanlı kitap kayıt ve listeleme uygulaması.
 
 Özellikler
 
-Kitap ekleme ve listeleme
+Kullanıcıdan bir kerede girilecek kitap adedini alma
 
-Üye ekleme ve listeleme
+Kitap bilgilerini (Ad, Yazar Adı, Yazar Soyadı, Sayfa Sayısı, YayınEvi) alarak nesne oluşturma
 
-Kitap ödünç alma ve iade işlemleri
+Otomatik olarak kayıt tarihi atama
 
-Etkileşimli menü tabanlı kullanım
+Girilen kitapları liste halinde formatlı olarak ekrana yazdırma
 
 Gereksinimler
 
@@ -36,36 +36,44 @@ Uygulamayı F5 (Debug) veya Ctrl+F5 (Debugsuz) ile çalıştırın.
 
 Kullanım
 
-Uygulama çalıştığında ekrana basit bir menü gelecek.
+Uygulama çalıştığında konsolda önce kaç kitap girmek istediğinizi sorar.
 
-Menüdeki numaraları girerek ilgili işlemi seçin:
+Girilecek adet pozitif bir tam sayı değilse program sonlanır.
 
-Kitap Ekle
+Her kitap için sırasıyla aşağıdaki bilgileri girin:
 
-Kitap Listele
+Ad
 
-Üye Ekle
+Yazar Adı
 
-Üye Listele
+Yazar Soyadı
 
-Kitap Ödünç Ver
+Sayfa Sayısı (numerik değer olarak girilmeli)
 
-Kitap İade Al
+Yayın Evi
 
-Çıkış
+Kitap nesnesi oluşturulurken kayıt tarihi otomatik olarak DateTime.Now ile atanır.
 
-İşlem tamamlandıktan sonra ana menü tekrar görüntülenecektir.
+Tüm kitaplar girildikten sonra ekrana aşağıdaki formatta liste yazdırılır:
+
+1. "Girişimci Ruh" - "Ahmet" - "Yılmaz" - [250] - Pearson - 2025-05-25 21:00:00
+2. "C# 101"      - "Mehmet" - "Demir"  - [320] - KodKitap    - 2025-05-25 21:00:05
+...
 
 Proje Yapısı
 
 patika-Kutuphane/
 │
-├─ Patika Kütuphane.sln      // Çözüm dosyası
-├─ Patika Kütuphane/         // C# proje klasörü
-│   ├─ Program.cs            // Uygulama giriş noktası ve menü akışını barındırır
-│   ├─ Models/               // `Kitap`, `Uye` gibi model sınıfları
-│   └─ Helpers/              // Yardımcı metotlar ve servis sınıfları
+├─ Patika Kütuphane.sln     // Çözüm dosyası
+├─ Patika Kütuphane/        // C# proje klasörü
+│   ├─ Program.cs           // Uygulama giriş noktası ve kitap kayıt-listeleme akışı
+│   ├─ Models/              // `Kitap` model sınıfını barındırır
 │
 ├─ .gitignore
 └─ README.md
 
+Katkıda Bulunma
+
+Yeni özellikler veya hata düzeltmeleri için pull request açabilirsiniz.
+
+Sorunları (issues) bildirerek katkıda bulunabilirsiniz.
