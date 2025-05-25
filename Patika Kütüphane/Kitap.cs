@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Patika_Kütüphane
 {
     internal class Kitap
-    {
+    {   // Parametre almayan default constructor
         public Kitap()
         {
             Ad = "Bilinmiyor";
@@ -17,7 +17,7 @@ namespace Patika_Kütüphane
             YayınEvi = "Bilinmiyor";
             KayıtTarihi = DateTime.Now;
         }
-
+        // Parametre alan constructor.
         public Kitap(string ad, string yazarAdı, string yazarSoyadı, string sayfaSayısı, string yayınEvi, DateTime kayıtTarihi)
         {
             Ad = ad;
